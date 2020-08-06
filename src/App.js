@@ -22,7 +22,7 @@ class App extends Component {
 
         this.setState({
             uploadedFiles: response.data.map(file => ({
-                id: file.id,
+                id: file._id,
                 name: file.name,
                 readableSize: filesize(file.size),
                 preview: file.url,
@@ -76,7 +76,7 @@ class App extends Component {
         }).then(( response)=> {
             this.updateFile(uploadedFile.id, {
                 uploaded: true,
-                id: response.data.id,
+                id: response.data._id,
                 url: response.data.url,
             })
         }).catch(() => {
