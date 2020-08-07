@@ -6,10 +6,11 @@ import api from "./services/api";
 
 import GlobalStyle from './styles/global';
 
-import { Container, Content } from "./styles"; 
+import { Container, Content, Logo } from "./styles";
 
 import Upload from './components/Upload';
 import FileList from './components/FileList'
+import logoNsr from "./Assets/Images/logo.svg";
 
 
 class App extends Component {
@@ -102,6 +103,7 @@ class App extends Component {
       const { uploadedFiles } = this.state;
     return (<Container>
             <Content>
+                <Logo src={logoNsr}/>
             <Upload onUpload={this.handleUpload}/>
                 { !!uploadedFiles.length && (
                     <FileList files={uploadedFiles} onDelete={this.handleDelete} />

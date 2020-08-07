@@ -15,3 +15,13 @@ export const Content = styled.div`
   border-radius: 4px;
   padding: 20px;
 `;
+
+export const Logo = styled.img`
+    width: 50%;
+    align-items: center;
+    max-width: 400px;
+    margin: 90px;
+    border-radius: 4px;
+    background: #fff;
+    padding: 20px;
+`;
