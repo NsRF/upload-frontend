@@ -5,11 +5,11 @@ import { MdCheckCircle, MdError, MdLink} from 'react-icons/md';
 import { Container, FileInfo, Preview } from "./styles";
 
 export const FileList = ({ files, onDelete }) => (
-    <Container> 
+    <Container>
         {files.map(uploadedFile => (
             <li key={uploadedFile.id}>
                     <FileInfo>
-                        <Preview src={uploadedFile.preview}>
+                        <Preview src={uploadedFile.preview}/>
                             <div>
                                 <strong>{uploadedFile.name}</strong>
                                 <span>{uploadedFile.readableSize}
@@ -18,7 +18,6 @@ export const FileList = ({ files, onDelete }) => (
                                     )}
                                 </span>
                             </div>
-                        </Preview>
                     </FileInfo>
 
                     <div>
@@ -29,7 +28,7 @@ export const FileList = ({ files, onDelete }) => (
                                     path: { stroke: '#7159c1'}
                                 }}
                                 strokeWidth={10}
-                                percentage={uploadedFile.progress}
+                                value={uploadedFile.progress}
                             />
                         )}
 
